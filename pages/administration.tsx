@@ -1,112 +1,112 @@
-import NextImage from 'next/image';
-import Link from 'next/link';
-import { margin } from 'polished';
-import { MdEmail } from 'react-icons/md';
-import styled from 'styled-components';
+import NextImage from "next/image"
+import Link from "next/link"
+import { margin } from "polished"
+import { MdEmail } from "react-icons/md"
+import styled from "styled-components"
 
-import AutofitGrid from 'components/AutofitGrid';
-import Container from 'components/Container';
-import Page from 'components/Page';
-import SectionTitle from 'components/SectionTitle';
-import { media } from 'utils/media';
+import AutofitGrid from "components/AutofitGrid"
+import Container from "components/Container"
+import Page from "components/Page"
+import SectionTitle from "components/SectionTitle"
+import { media } from "utils/media"
 
 const TeamMembers = [
   
-  {
-    name: 'Amarendra Mohanty',
-    position: 'Senior Project Manager',
-    image: '/testimonials/amarendra_2022.jpeg',
-    email: 'spooffice@iitk.ac.in',
-    phone: '+0512-259-4433',
-  },
-  {
-    name: 'Deepika Agarwal',
-    position: 'Programme Manager',
-    image: '/testimonials/deepika_2022.jpeg',
-    email: 'tmclub@iitk.ac.in',
-    phone: '+512-259-4433/34',
-  },
-  {
-    name: 'Sandeep Kumar',
-    position: 'Superintendent',
-    image: '/testimonials/sandeep_2022.jpeg',
-    email: 'spooffice@iitk.ac.in',
-    phone: '+512-259-4433/34',
-  },
+	{
+		name: "Amarendra Mohanty",
+		position: "Senior Project Manager",
+		image: "/testimonials/amarendra_2022.jpeg",
+		email: "spooffice@iitk.ac.in",
+		phone: "+0512-259-4433",
+	},
+	{
+		name: "Deepika Agarwal",
+		position: "Programme Manager",
+		image: "/testimonials/deepika_2022.jpeg",
+		email: "tmclub@iitk.ac.in",
+		phone: "+512-259-4433/34",
+	},
+	{
+		name: "Sandeep Kumar",
+		position: "Superintendent",
+		image: "/testimonials/sandeep_2022.jpeg",
+		email: "spooffice@iitk.ac.in",
+		phone: "+512-259-4433/34",
+	},
 
-  {
-    name: 'Rachit Kumar Yadav',
-    position: 'Junior Assistant',
-    image: '/testimonials/rachit_2022.jpeg',
-    email: 'spooffice@iitk.ac.in',
-    phone: '+512-259-4433/34',
-  },
-];
+	{
+		name: "Rachit Kumar Yadav",
+		position: "Junior Assistant",
+		image: "/testimonials/rachit_2022.jpeg",
+		email: "spooffice@iitk.ac.in",
+		phone: "+512-259-4433/34",
+	},
+]
 
 export default function OfficeTeam() {
-  return (
-    <Page title="Administration" keywords="Administration IITK, SPO Management IITK" description="">
-      <DarkerBackgroundContainer>
-        <SectionTitle>SPO Chairperson</SectionTitle>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Card>
-            <NextImage src="/testimonials/chairperson2026.jpeg" width={190} height={128} alt="Chairperson SPO" />
-            <Title>Prof Manjesh Kumar Singh</Title>
-            <Description>Chairperson, Students&apos; Placement Office </Description>
-            <Description>
-              <Link href="/chairman-message" passHref>
+	return (
+		<Page title="Administration" keywords="Administration IITK, SPO Management IITK" description="">
+			<DarkerBackgroundContainer>
+				<SectionTitle>SPO Chairperson</SectionTitle>
+				<div style={{ display: "flex", justifyContent: "center" }}>
+					<Card>
+						<NextImage src="/testimonials/chairperson2026.jpeg" width={190} height={128} alt="Chairperson SPO" />
+						<Title>Prof Manjesh Kumar Singh</Title>
+						<Description>Chairperson, Students&apos; Placement Office </Description>
+						<Description>
+							<Link href="/chairman-message" passHref>
                 Chairperson&apos; Message
-              </Link>
-            </Description>
-          </Card>
-        </div>
-        <SectionTitle>SPO Vice Chairperson</SectionTitle>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Card>
-            <NextImage src="/testimonials/vc2026.jpeg" width={130} height={128} alt="Vice Chairperson SPO" />
-            <Title>Prof. Ritika Gautam Singh</Title>
-            <Description>Vice Chairperson, Students&apos; Placement Office </Description>
-            <Description>
-              <Link href="/vice-chairman-message" passHref>
+							</Link>
+						</Description>
+					</Card>
+				</div>
+				<SectionTitle>SPO Vice Chairperson</SectionTitle>
+				<div style={{ display: "flex", justifyContent: "center" }}>
+					<Card>
+						<NextImage src="/testimonials/vc2026.jpeg" width={130} height={128} alt="Vice Chairperson SPO" />
+						<Title>Prof. Ritika Gautam Singh</Title>
+						<Description>Vice Chairperson, Students&apos; Placement Office </Description>
+						<Description>
+							<Link href="/vice-chairman-message" passHref>
                 Vice Chairperson&apos; Message
-              </Link>
-            </Description>
-          </Card>
-        </div>
-        <SectionTitle>SPO Officials</SectionTitle>
-        <Container style={{ textAlign: 'center' }}>
-          <CustomAutofitGrid className="Administrationcard" style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
-            {TeamMembers.map((member) => (
-              <div key={member.name} style={{ width: '29em', margin: '0 auto' }}>
-                <Card>
-                  {member.image && <NextImage src={member.image} width={128} height={128} alt={member.name} />}
-                  <Title>{member.name}</Title>
-                  <Description>{member.position}</Description>
+							</Link>
+						</Description>
+					</Card>
+				</div>
+				<SectionTitle>SPO Officials</SectionTitle>
+				<Container style={{ textAlign: "center" }}>
+					<CustomAutofitGrid className="Administrationcard" style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+						{TeamMembers.map((member) => (
+							<div key={member.name} style={{ width: "29em", margin: "0 auto" }}>
+								<Card>
+									{member.image && <NextImage src={member.image} width={128} height={128} alt={member.name} />}
+									<Title>{member.name}</Title>
+									<Description>{member.position}</Description>
 
-                  <Description>{member.phone}</Description>
-                  <Description>
-                    <Link href={`mailto:${member.email}`} aria-label="Send email">
-                      <MdEmail size={18} />
-                    </Link>
-                  </Description>
-                </Card>
-              </div>
-            ))}
-          </CustomAutofitGrid>
-          <Wrapper>
-            <h3>Office Contact Details</h3>
-            <p>
-              <span>Email:</span> <a href="mailto:spooffice@iitk.ac.in">spooffice@iitk.ac.in</a>
-            </p>
-            <p>
-              <span>Desk No. :</span> 0512-259-4433/34
-            </p>
-          </Wrapper>
-        </Container>
-        <br />
-      </DarkerBackgroundContainer>
-    </Page>
-  );
+									<Description>{member.phone}</Description>
+									<Description>
+										<Link href={`mailto:${member.email}`} aria-label="Send email">
+											<MdEmail size={18} />
+										</Link>
+									</Description>
+								</Card>
+							</div>
+						))}
+					</CustomAutofitGrid>
+					<Wrapper>
+						<h3>Office Contact Details</h3>
+						<p>
+							<span>Email:</span> <a href="mailto:spooffice@iitk.ac.in">spooffice@iitk.ac.in</a>
+						</p>
+						<p>
+							<span>Desk No. :</span> 0512-259-4433/34
+						</p>
+					</Wrapper>
+				</Container>
+				<br />
+			</DarkerBackgroundContainer>
+		</Page>
+	)
 }
 const Wrapper = styled.div`
   padding: 2.5rem;
@@ -126,7 +126,7 @@ const Wrapper = styled.div`
     opacity: 1;
     color: rgba(var(--text), 1);
   }
-`;
+`
 
 const Card = styled.div`
   display: flex;
@@ -145,22 +145,22 @@ const Card = styled.div`
   & > *:not(:first-child) {
     margin-top: 1rem;
   }
-`;
+`
 
 const Title = styled.div`
   font-weight: bold;
-`;
+`
 
 const Description = styled.div`
   opacity: 0.6;
-`;
+`
 
 const CustomAutofitGrid = styled(AutofitGrid)`
   --autofit-grid-item-size: 20rem;
-  ${media('<=tablet')} {
+  ${media("<=tablet")} {
     --autofit-grid-item-size: 25rem;
   }
-  ${media('<=phone')} {
+  ${media("<=phone")} {
     --autofit-grid-item-size: 100%;
   }
   &.Administrationcard {
@@ -168,11 +168,11 @@ const CustomAutofitGrid = styled(AutofitGrid)`
       flex-direction: column; // Apply for screens <= 768px (mobile)
     }
   }
-`;
+`
 
 const DarkerBackgroundContainer = styled.div`
   background: rgb(var(--background));
   & > *:not(:first-child) {
     margin-top: 10rem;
   }
-`;
+`
